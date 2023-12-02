@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <parent>
-    <artifactId>bridgedb-bundle</artifactId>
-    <groupId>org.bridgedb</groupId>
-    <version>3.0.24</version>
-  </parent>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.bridgedb.examples</groupId>
   <artifactId>examples</artifactId>
   <name>BridgeDb Examples</name>
+  <version>3.0.24</version>
+  <packaging>jar</packaging>
   
   	<build>
+                <pluginManagement>
+                        <plugins>
+                                <plugin>
+                                        <artifactId>maven-compiler-plugin</artifactId>
+                                        <version>3.8.1</version>
+                                        <configuration>
+                                                <source>8</source>
+                                                <target>8</target>
+                                        </configuration>
+                                </plugin>
+                        </plugins>
+                </pluginManagement>
 		<directory>target</directory>
 		<outputDirectory>target/classes</outputDirectory>
 		<finalName>${project.artifactId}-${project.version}</finalName>
@@ -34,25 +43,25 @@
     <dependency>
     	<groupId>org.bridgedb</groupId>
     	<artifactId>org.bridgedb</artifactId>
-    	<version>${project.parent.version}</version>
+    	<version>3.0.24</version>
     	<scope>compile</scope>
     </dependency>
     <dependency>
     	<groupId>org.bridgedb</groupId>
     	<artifactId>org.bridgedb.bio</artifactId>
-    	<version>${project.parent.version}</version>
+    	<version>3.0.24</version>
     	<scope>compile</scope>
     </dependency>
     <dependency>
     	<groupId>org.bridgedb.webservice</groupId>
     	<artifactId>org.bridgedb.webservice.bridgerest</artifactId>
-    	<version>${project.parent.version}</version>
+    	<version>3.0.24</version>
     	<scope>compile</scope>
     </dependency>
     <dependency>
     	<groupId>org.bridgedb.webservice</groupId>
     	<artifactId>org.bridgedb.webservice.biomart</artifactId>
-    	<version>${project.parent.version}</version>
+    	<version>3.0.24</version>
     	<scope>compile</scope>
     </dependency>
     <dependency>
